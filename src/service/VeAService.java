@@ -26,17 +26,22 @@ public class VeAService {
         Course c2 = new Course("Daiļzīmēšanas pamati", (byte) 2, prof2);
         Course c3 = new Course("Nelikumīgu likumu pamati", (byte) 1, prof3);
         Course c4 = new Course("Nepamatotie likumu pamati", (byte) 2, prof3);
-        System.out.println(c1);
-        System.out.println(c2);
-        System.out.println(c3);
-        System.out.println(c4);
+        allCourses.add(c1);
+        allCourses.add(c2);
+        allCourses.add(c3);
+        for(Course c : allCourses) {
+            System.out.println(c);
+        }
 
         Student stud1 = new Student("Jānis", "Bērziņš");
         Student stud2 = new Student("Fliks", "Noskoperis");
         Student stud3 = new Student("Genādijs", "Germands");
-        System.out.println(stud1);
-        System.out.println(stud2);
-        System.out.println(stud3);
+        allStudents.add(stud1);
+        allStudents.add(stud2);
+        allStudents.add(stud3);
+        for(Student stud : allStudents) {
+            System.out.println(stud);
+        }
 
         Grade gr1 = new Grade((byte)10, stud1, c1);
         Grade gr2 = new Grade((byte)5, stud2, c1);
@@ -48,16 +53,19 @@ public class VeAService {
         Grade gr8 = new Grade((byte)6, stud2, c3);
         Grade gr9 = new Grade((byte)1, stud3, c3);
         Grade gr10 = new Grade((byte)10, stud3, c4);
-
-        System.out.println(gr1);
-        System.out.println(gr2);
-        System.out.println(gr3);
-        System.out.println(gr4);
-        System.out.println(gr5);
-        System.out.println(gr6);
-        System.out.println(gr7);
-        System.out.println(gr8);
-        System.out.println(gr9);
-        System.out.println(gr10);
+        allGrades.add(gr1);
+        allGrades.add(gr2);
+        allGrades.add(gr3);
+        allGrades.add(gr4);
+        allGrades.add(gr5);
+        allGrades.add(gr6);
+        allGrades.add(gr7);
+        allGrades.add(gr8);
+        allGrades.add(gr9);
+        allGrades.add(gr10);
+        for(Grade gr : allGrades) {
+            System.out.println(gr);
+        }
+    
     }
 }
