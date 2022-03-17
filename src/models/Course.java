@@ -85,4 +85,11 @@ public class Course
     {
         return id + " " + title + " "+ creditPoints + " " + professor;
     }
+    public boolean equals(Object obj) {
+        Course otherCourse = (Course)obj;
+        if(title.equals(otherCourse.getTitle())) {
+            return true;
+        }
+        return false;
+    }
 }

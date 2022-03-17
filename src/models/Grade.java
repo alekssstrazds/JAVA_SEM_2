@@ -86,7 +86,7 @@ public class Grade
     //toString
     public String toString() 
     {
-        return "gradeValue [course=" + course + ", gradeValue=" + gradeValue + ", id=" + id + ", student=" + student + "]";
+        return course + " " + gradeValue + " " + id + " " + student;
     }
     
 
