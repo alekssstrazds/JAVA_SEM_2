@@ -60,7 +60,11 @@ public class VeAService {
         for(Grade gr : allGrades) {
             System.out.println(gr);
         }
-        
+        //Polimorfisms
+        Person p = new Person("Karlis", "Migla");
+        allPersons.add(p);
+        Person stud4 = new Person("Pēteris", "Mazais");
+        allPersons.add(stud4);
         for(Person pers: allPersons) {
             System.out.println(pers.toString());
         }
