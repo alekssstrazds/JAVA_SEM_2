@@ -1,18 +1,25 @@
 package service;
 
+import java.util.ArrayList;
+
 import models.*;
 
-public class VeAService 
-{
-    public static void main(String[] args)
-    {
+public class VeAService {
+    private static ArrayList<Professor> allProfessors = new ArrayList<>();
+    private static ArrayList<Course> allCourses = new ArrayList<>();
+    private static ArrayList<Student> allStudents = new ArrayList<>();
+    private static ArrayList<Grade> allGrades = new ArrayList<>();
+    public static void main(String[] args) {
         Professor prof1 = new Professor("Alekss", "Strazds", ProfDegree.master);
         Professor prof2 = new Professor("Sskela", "Sdzarts", ProfDegree.master);
         Professor prof3 = new Professor("Fricis", "Kreisais", ProfDegree.master);
-        System.out.println(prof1.toString());
-        System.out.println(prof2);
-        System.out.println(prof3);
+        allProfessors.add(prof1);
+        allProfessors.add(prof2);
+        allProfessors.add(prof3);
         
+        for(Professor prof : allProfessors) {
+            System.out.println(prof);
+        }
 
         System.out.println("----------------------");
         Course c1 = new Course("Programmēšana tīmeklī Java", (byte) 4, prof1);
