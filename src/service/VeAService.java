@@ -76,7 +76,7 @@ public class VeAService {
             }
         }
     }
-    //CRUD -create, read, update, delete
+    //CRUD - create, read, update, delete
     //C - create
     private static boolean addNewCourse(String title, byte creditPoints, Professor professor) {
         Course course = new Course(title, creditPoints, professor);
@@ -85,6 +85,7 @@ public class VeAService {
         } else allCourses.add(course);
         return true;
     }
+    //R - read
     private static Course readCoursebyId(int courseId) {
         if(courseId >= 1000 & courseId < 10000) {
             for (Course course : allCourses) {
@@ -95,5 +96,17 @@ public class VeAService {
         }
         return new Course();
     }
-
+    //U - update
+    private static boolean updateCoursebyID(int courseId, byte updateCp, Professor upadeteProfessor) {
+        if(courseId >= 1000 & courseId < 10000) {
+            for (Course course : allCourses) {
+                if(course.getId() == courseId) {
+                    course.setCreditPoints(updateCp);
+                    course.setProfessor(upadeteProfessor);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
