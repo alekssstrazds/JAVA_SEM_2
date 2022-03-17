@@ -85,4 +85,15 @@ public class VeAService {
         } else allCourses.add(course);
         return true;
     }
+    private static Course readCoursebyId(int courseId) {
+        if(courseId >= 1000 & courseId < 10000) {
+            for (Course course : allCourses) {
+                if(course.getId() == courseId) {
+                    return course;
+                }
+            }
+        }
+        return new Course();
+    }
+
 }

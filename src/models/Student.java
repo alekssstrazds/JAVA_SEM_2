@@ -4,7 +4,7 @@ public class Student extends Person
 {
     //Mainīgie
    private int id;
-   private static int idCounter = 100000;
+   private static int idCounter = 10000;
     //Get funkcijas
     public int getId() {
         return id;
