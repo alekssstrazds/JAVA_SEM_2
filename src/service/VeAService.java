@@ -68,5 +68,12 @@ public class VeAService {
         for(Person pers: allPersons) {
             System.out.println(pers.toString());
         }
+
+        for(Person pers : allPersons) {
+            if(pers instanceof Professor) {
+                Professor prof = (Professor)pers;
+                System.out.println(prof.getDegree());
+            }
+        }
     }
 }
