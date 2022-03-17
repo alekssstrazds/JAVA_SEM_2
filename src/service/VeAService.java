@@ -9,6 +9,7 @@ public class VeAService {
     private static ArrayList<Course> allCourses = new ArrayList<>();
     private static ArrayList<Student> allStudents = new ArrayList<>();
     private static ArrayList<Grade> allGrades = new ArrayList<>();
+    private static ArrayList<Person> allPersons = new ArrayList<>();
     public static void main(String[] args) {
         Professor prof1 = new Professor("Alekss", "Strazds", ProfDegree.master);
         Professor prof2 = new Professor("Sskela", "Sdzarts", ProfDegree.master);
@@ -17,10 +18,6 @@ public class VeAService {
         allProfessors.add(prof2);
         allProfessors.add(prof3);
         
-        for(Professor prof : allProfessors) {
-            System.out.println(prof);
-        }
-
         System.out.println("----------------------");
         Course c1 = new Course("Programmēšana tīmeklī Java", (byte) 4, prof1);
         Course c2 = new Course("Daiļzīmēšanas pamati", (byte) 2, prof2);
@@ -39,10 +36,7 @@ public class VeAService {
         allStudents.add(stud1);
         allStudents.add(stud2);
         allStudents.add(stud3);
-        for(Student stud : allStudents) {
-            System.out.println(stud);
-        }
-
+        
         Grade gr1 = new Grade((byte)10, stud1, c1);
         Grade gr2 = new Grade((byte)5, stud2, c1);
         Grade gr3 = new Grade((byte)8, stud2, c2);
@@ -66,6 +60,9 @@ public class VeAService {
         for(Grade gr : allGrades) {
             System.out.println(gr);
         }
-    
+        
+        for(Person pers: allPersons) {
+            System.out.println(pers.toString());
+        }
     }
 }
